@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi"
+import { BiSearchAlt2 } from "react-icons/bi"
 
 const Navbar = () => {
     return (

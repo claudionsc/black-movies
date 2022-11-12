@@ -61,10 +61,36 @@ a:hover{
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 4px;
   grid-row-gap: 4px;
-
-  background-color: yellowgreen;
   width: 90vw;
   height: auto;
-  margin: auto;
+  margin: 50px auto;
+  align-items: center;
+  justify-items: center;
 
+}
+
+.poster{
+  width: 100%;
+  transition: all ease-in-out 200ms;
+}
+.poster:hover{
+  scale: 105%;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+
+
+.movie-item{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  
+  
 }
