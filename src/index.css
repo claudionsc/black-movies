@@ -92,5 +92,24 @@ a:hover{
   margin-top: 20px;
   border-radius: 10px;
   
-  
+}
+
+.movie-desc{
+  width: 80vw;
+  height: 60vh;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  z-index: 1;
+  margin: auto;
+  align-self: flex-start;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.poster-desc{
+  width: 18vw;
+  height: auto;
 }

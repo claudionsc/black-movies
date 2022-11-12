@@ -6,10 +6,13 @@ import App from './App';
 import Home from './components/pages/Home';
 import Search from './components/pages/Search';
 import Movie from './components/pages/Movie';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route element={<App />}>
@@ -19,6 +22,7 @@ root.render(
         </Route>
       </Routes>
     </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
