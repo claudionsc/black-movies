@@ -8,10 +8,6 @@ const Navbar = () => {
             <div className="title">
                 <h2><Link to="/">BlackMovies</Link></h2>
             </div>
-            <form>
-                <input style={{marginRight: '5px'}} type='text'placeholder="Busque um filme" />
-                <button className="btn" type='submit'><BiSearchAlt2 /></button>
-            </form>
         </nav>
     )
 }

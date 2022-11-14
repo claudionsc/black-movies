@@ -3,6 +3,10 @@ import React from "react";
 import { useState, useEffect  } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { showDesc } from "../../store";
+import MovieDesc from "../style/MovieDesc";
+import { HiXMark } from 'react-icons/hi2'
+
+
 
 export default function Home() {
 
@@ -27,30 +31,34 @@ export default function Home() {
         }
     
     return (
-        <article className="main-movies">
+        <main className="main-movies">
             <div id="main">
                 {movies.map(movie => {
                     return(
-                        <>
+                        
                         <div onClick={HandleClick} className="movie-item" key={movie.id}>
                            <h1 style={{margin: "25px 0"}}>{movie.nome}</h1> 
                            <img onClick={() =>dispatch(showDesc(movie))} className="poster" alt={movie.nome} src={movie.img}></img>
                         </div>
-                           {desc === true &&
-                               <div className="movie-desc">
-                                <div>
-                                    <img className="poster-desc" alt={ShowDesc.desc.nome} src={ShowDesc.desc.img}></img> 
-                                </div>
-                                <div style={{width: "50%", paddingLeft: "100px"}}>
-                                    <h2 style={{marginBottom: "10px"}}>Nome: {ShowDesc.desc.nome}</h2>
-                                    <p>{ShowDesc.desc.descricao}</p>
-                                </div>
-                               </div>
-                           }
-                        </>
+                        
                     )
                 })}
+                {desc === true &&
+                    <MovieDesc>
+                         <img className="poster-desc-img" alt={ShowDesc.desc.nome} src={ShowDesc.desc.img}></img> 
+                     <div className="poster-desc-txt">
+                         <h2 style={{marginBottom: "10px"}}>Nome: {ShowDesc.desc.nome}</h2>
+                         <p>{ShowDesc.desc.descricao}</p>
+                         
+                     </div>
+                         <div className="x-mark" onClick={() => {
+                            setDesc(false)
+                         }}>
+                        <HiXMark />
+                        </div>
+                    </MovieDesc>
+                }
             </div>
-        </article>
+        </main>
     )
 }

@@ -9,7 +9,6 @@ const MovieReducers = createReducer(INITIAL_STATE, {
 })
 
 const loggerMiddleware = store => next => action => {
-    console.log(action)
     next(action)
 }
 const confirmMiddleware = store => next => action => {
