@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BiSearchAlt2 } from "react-icons/bi"
+import styled from "styled-components";
+import {AiFillGithub, AiFillLinkedin} from "react-icons/ai"
+
+const Icon = styled.a`
+    width: 50px;
+    font-size: 1.5rem;
+
+`
 
 const Navbar = () => {
     return (
@@ -8,6 +15,13 @@ const Navbar = () => {
             <div className="title">
                 <h2><Link to="/">BlackMovies</Link></h2>
             </div>
+
+            <Icon>
+                <AiFillGithub />
+            </Icon>
+            <Icon>
+                <AiFillLinkedin />
+            </Icon>
         </nav>
     )
 }
