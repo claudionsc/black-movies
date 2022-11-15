@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaCrown } from "react-icons/fa"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
@@ -14,7 +13,7 @@ const Navbar = () => {
     return (
         <nav id="navbar">
             <div className="title">
-                <Link to="/"><h2>BlackMovies</h2></Link><a><FaCrown /></a>
+                <h2>BlackMovies <FaCrown /></h2>
             </div>
 
             <Icon>

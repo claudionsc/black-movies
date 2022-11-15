@@ -46,6 +46,8 @@ a:hover {
   margin: auto;
   display: flex;
   align-items: center;
+  color: rgb(38, 95, 95);
+
 }
 
 .title h2 {
