@@ -2,13 +2,13 @@ import styled from "styled-components";
 import 'animate.css'
 import { useSelector } from "react-redux";
 
-    function MovieDesc({children}) {
-    
-        const showBg = useSelector((state) => state)
-        
-        const Bg = showBg.desc.img2
+function MovieDesc({ children }) {
 
-        
+    const showBg = useSelector((state) => state)
+
+    const Bg = showBg.desc.img2
+
+
     const Desc = styled.section`
 
     width: 80vw;
@@ -27,7 +27,7 @@ import { useSelector } from "react-redux";
 
 `
 
-        const BgImg = styled.div`
+    const BgImg = styled.div`
 
         position: absolute;
         border-radius: 5px;
@@ -49,21 +49,21 @@ import { useSelector } from "react-redux";
         }
 
     `
-        
-        return (
-            <Desc>
-                <div className="poster-desc">
+
+    return (
+        <Desc>
+            <div className="poster-desc">
                 {children}
-                </div>
-                <BgImg alt="bg-img"/>
-                
-                
-            </Desc>
-        )
-    }
+            </div>
+            <BgImg alt="bg-img" />
+
+
+        </Desc>
+    )
+}
 
 
 
-    
 
-    export default MovieDesc
+
+export default MovieDesc

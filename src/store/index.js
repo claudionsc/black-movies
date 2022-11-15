@@ -12,9 +12,9 @@ const loggerMiddleware = store => next => action => {
     next(action)
 }
 const confirmMiddleware = store => next => action => {
-    if(action.type === showDesc.type){
+    if (action.type === showDesc.type) {
         next(action)
-    }else{
+    } else {
         next(action)
     }
 }
@@ -24,6 +24,6 @@ export default configureStore({
         desc: MovieReducers
     },
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(loggerMiddleware)
-    .concat(confirmMiddleware)
+        getDefaultMiddleware().concat(loggerMiddleware)
+            .concat(confirmMiddleware)
 })

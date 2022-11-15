@@ -15,15 +15,15 @@ body {
 }
 
 
-#navbar{
-  background-color:black;
+#navbar {
+  background-color: black;
   width: 100%;
   height: 10vh;
   display: flex;
   align-items: center;
 }
 
-form{
+form {
   margin-right: 20px;
   width: 15%;
   height: 40%;
@@ -32,16 +32,17 @@ form{
   justify-content: center;
 }
 
-a{
+a {
   color: rgb(38, 95, 95);
   transition: all ease-in-out 100ms;
 }
-a:hover{
+
+a:hover {
   color: rgb(19, 64, 64);
   cursor: pointer;
 }
 
-.title{
+.title {
   margin: auto;
   display: flex;
   align-items: center;
@@ -53,18 +54,18 @@ a:hover{
 
 
 
-.btn{
+.btn {
   font-size: 0.8rem;
   background-color: white;
   padding: 2px;
   transition: all ease-in-out 100ms;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: rgb(211, 211, 211);
 }
 
-#main{
+#main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -78,11 +79,12 @@ a:hover{
 
 }
 
-.poster{
+.poster {
   width: 100%;
   transition: all ease-in-out 200ms;
 }
-.poster:hover{
+
+.poster:hover {
   scale: 105%;
   margin-top: 5px;
   cursor: pointer;
@@ -90,7 +92,7 @@ a:hover{
 
 
 
-.movie-item{
+.movie-item {
   background-color: white;
   width: 100%;
   height: 100%;
@@ -103,10 +105,10 @@ a:hover{
 
   animation: fadeIn;
   animation-duration: 2s;
-  
+
 }
 
-.movie-desc{
+.movie-desc {
   width: 80vw;
   height: 60vh;
   position: fixed;
@@ -122,25 +124,27 @@ a:hover{
 }
 
 
-.poster-desc{
+.poster-desc {
   position: absolute;
   z-index: 1;
   display: flex;
   align-items: center;
 }
-.poster-desc-img{
+
+.poster-desc-img {
   width: 18vw;
   height: auto;
   padding: 50px;
 }
-.poster-desc-txt{
+
+.poster-desc-txt {
   width: 18vw;
   height: auto;
   width: 50%;
   color: white;
 }
 
-.x-mark{
+.x-mark {
   position: inherit;
   align-self: flex-start;
   justify-content: left;
@@ -154,7 +158,7 @@ a:hover{
   transition: all ease-in-out 200ms;
 }
 
-.x-mark:hover{
+.x-mark:hover {
   cursor: pointer;
   /* color: white; */
   color: rgb(19, 64, 64);
