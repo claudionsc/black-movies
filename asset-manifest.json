@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/black-movies/static/css/main.7128b29c.css",
+    "main.js": "/black-movies/static/js/main.f8274f69.js",
+    "index.html": "/black-movies/index.html",
+    "main.7128b29c.css.map": "/black-movies/static/css/main.7128b29c.css.map",
+    "main.f8274f69.js.map": "/black-movies/static/js/main.f8274f69.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7128b29c.css",
+    "static/js/main.f8274f69.js"
+  ]
+}
