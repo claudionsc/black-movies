@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import 'animate.css'
 import { useSelector } from "react-redux";
 
     function MovieDesc({children}) {
@@ -21,6 +22,9 @@ import { useSelector } from "react-redux";
     align-items: center;
     border-radius: 5px;
 
+    animation: fadeIn; 
+    animation-duration: 1s; 
+
 `
 
         const BgImg = styled.div`
@@ -32,6 +36,8 @@ import { useSelector } from "react-redux";
         background-size: cover;
         width: 80vw;
         height: 70vh;
+
+       
 
         ::before{
             content: "";

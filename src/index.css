@@ -1,3 +1,5 @@
+@import url('animate.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -41,8 +43,15 @@ a:hover{
 
 .title{
   margin: auto;
-  
+  display: flex;
+  align-items: center;
 }
+
+.title h2 {
+  padding: 5px;
+}
+
+
 
 .btn{
   font-size: 0.8rem;
@@ -91,6 +100,9 @@ a:hover{
   align-items: center;
   margin-top: 20px;
   border-radius: 10px;
+
+  animation: fadeIn;
+  animation-duration: 2s;
   
 }
 
@@ -137,11 +149,13 @@ a:hover{
   font-weight: bold;
   position: relative;
   left: 5vw;
-  margin-top: 20px;
-  
+  margin-top: 5vh;
+  color: rgb(38, 95, 95);
+  transition: all ease-in-out 200ms;
 }
 
 .x-mark:hover{
   cursor: pointer;
-  color: white;
+  /* color: white; */
+  color: rgb(19, 64, 64);
 }

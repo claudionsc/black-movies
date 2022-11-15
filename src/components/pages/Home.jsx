@@ -47,7 +47,7 @@ export default function Home() {
                     <MovieDesc>
                          <img className="poster-desc-img" alt={ShowDesc.desc.nome} src={ShowDesc.desc.img}></img> 
                      <div className="poster-desc-txt">
-                         <h2 style={{marginBottom: "10px"}}>Nome: {ShowDesc.desc.nome}</h2>
+                         <h3 style={{marginBottom: "10px"}}>Nome: {ShowDesc.desc.nome}</h3>
                          <p>{ShowDesc.desc.descricao}</p>
                          
                      </div>
