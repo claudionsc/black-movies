@@ -19,7 +19,7 @@ export default function Home() {
 
     useEffect(() => {
 
-        axios.get("https://bd-filmes.herokuapp.com/filmes")
+        axios.get("https://db-filmes.onrender.com/filmes")
             .then(res => {
                 setMovies(res.data.filmes)
             })
