@@ -35,7 +35,7 @@ export default function Home() {
                 {movies.map(movie => {
                     return (
 
-                        <div onClick={HandleClick} className="movie-item" key={movie.id}>
+                        <div onClick={HandleClick} dataTestid="movie-element" className="movie-item" key={movie.id}>
                             <h1 style={{ margin: "25px 0" }}>{movie.nome}</h1>
                             <img onClick={() => dispatch(showDesc(movie))} className="poster" alt={movie.nome} src={movie.img}></img>
                         </div>
