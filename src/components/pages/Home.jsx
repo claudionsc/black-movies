@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { showDesc } from "../../store";
-import MovieDesc from "../style/MovieDesc";
+import MovieDesc from "../styles/MovieDesc";
 import { HiXMark } from 'react-icons/hi2'
 
 
@@ -29,6 +29,17 @@ export default function Home() {
         setDesc(true)
     }
 
+    useEffect(() => {
+        function handleEscapeKey(event) {
+          if (event.code === 'Escape') {
+            setDesc(false)
+          }
+        }
+      
+        document.addEventListener('keydown', handleEscapeKey)
+        return () => document.removeEventListener('keydown', handleEscapeKey)
+      }, [])
+
     return (
         <main className="main-movies">
             <div id="main">
@@ -50,7 +61,9 @@ export default function Home() {
                             <p>{ShowDesc.desc.descricao}</p>
 
                         </div>
-                        <div className="x-mark" onClick={() => {
+                        <div className="x-mark" onDragLeave={() => {
+                            setDesc(false)
+                        }} onClick={() => {
                             setDesc(false)
                         }}>
                             <HiXMark />

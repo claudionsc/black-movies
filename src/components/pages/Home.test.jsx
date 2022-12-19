@@ -5,10 +5,11 @@ import React from "react";
 import Home from "./Home";
 import { Provider } from "react-redux";
 import store from "../../store";
-import { render, fireEvent, screen, getByTestId } from '@testing-library/react'
+import { render, fireEvent, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
-
+// const functionJest = jest.fn()
+// acima, armazena uma função para ser testada
 
 describe('homepage testing', () => {
 
@@ -23,15 +24,22 @@ describe('homepage testing', () => {
         expect(screen.findAllByTestId('movie-element')).toBeTruthy()
     })
 
-    it('should render a description of movie when fire event click', async () => {
-        render(
+    it('should render a description of movie when clicked',  () => {
+      render(
 
             <Provider store={store}>
                 <Home />
             </Provider>
 
-        )
-        fireEvent.click(await screen.findByTestId('movie-element'))
+        );
+
+        const movie =  screen.findAllByTestId('movie-element')
+        // expect(movie).toBeTruthy()
+        fireEvent.click(movie)
+
+        
+
+
     })
 
 })
