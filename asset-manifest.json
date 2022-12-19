@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/black-movies/static/css/main.5d5f4f1f.css",
-    "main.js": "/black-movies/static/js/main.b1e85567.js",
+    "main.css": "/black-movies/static/css/main.15393e78.css",
+    "main.js": "/black-movies/static/js/main.c21e30a7.js",
     "index.html": "/black-movies/index.html",
-    "main.5d5f4f1f.css.map": "/black-movies/static/css/main.5d5f4f1f.css.map",
-    "main.b1e85567.js.map": "/black-movies/static/js/main.b1e85567.js.map"
+    "main.15393e78.css.map": "/black-movies/static/css/main.15393e78.css.map",
+    "main.c21e30a7.js.map": "/black-movies/static/js/main.c21e30a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d5f4f1f.css",
-    "static/js/main.b1e85567.js"
+    "static/css/main.15393e78.css",
+    "static/js/main.c21e30a7.js"
   ]
 }
