@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { showDesc } from "../../store";
-import MovieDesc from "../styles/MovieDesc";
+import MovieDesc from "../styles/css/MovieDesc";
 import { HiXMark } from 'react-icons/hi2'
 
 
@@ -31,14 +31,14 @@ export default function Home() {
 
     useEffect(() => {
         function handleEscapeKey(event) {
-          if (event.code === 'Escape') {
-            setDesc(false)
-          }
+            if (event.code === 'Escape') {
+                setDesc(false)
+            }
         }
-      
+
         document.addEventListener('keydown', handleEscapeKey)
         return () => document.removeEventListener('keydown', handleEscapeKey)
-      }, [])
+    }, [])
 
     return (
         <main className="main-movies">
@@ -50,9 +50,9 @@ export default function Home() {
                             <h1 style={{ margin: "25px 0" }}>{movie.nome}</h1>
                             <img onClick={() => dispatch(showDesc(movie))} className="poster" alt={movie.nome} src={movie.img}></img>
                         </div>
-
                     )
                 })}
+
                 {desc === true &&
                     <MovieDesc>
                         <img className="poster-desc-img" alt={ShowDesc.desc.nome} src={ShowDesc.desc.img}></img>

@@ -1,4 +1,22 @@
-@import url("animate.css");
+@import url('animate.css');
+@import './var.scss';
+
+// MIXIN
+
+@mixin display($display, $alignItems, $justContent, $jusItems){
+  display: $display;
+  align-items: $alignItems;
+  justify-content: $justContent;
+  justify-items: $jusItems;
+}
+
+@mixin poster($width, $height){
+  width: $width;
+  height: $height;
+}
+
+// ESTILOS 
+
 * {
   margin: 0;
   padding: 0;
@@ -6,51 +24,51 @@
 }
 
 body {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(20, 50, 50);
 }
 
 #navbar {
-  display: flex;
-  align-items: center;
-  justify-content: none;
-  justify-items: none;
+
+  @include display(flex, center, none, none);
   background-color: black;
   width: 100%;
   height: 10vh;
 }
 
 form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-items: none;
+
+  @include display(flex, center, center, none);
+
   margin-right: 20px;
   width: 15%;
   height: 40%;
 }
 
 a {
-  color: rgb(38, 95, 95);
+  color: $blueLigth;
   transition: all ease-in-out 100ms;
-}
-a:hover {
-  color: rgb(19, 64, 64);
-  cursor: pointer;
+
+  &:hover {
+    color: darken($color: $blueLigth, $amount: 5%);
+    cursor: pointer;
+  }
 }
 
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: none;
-  justify-items: none;
+
+  @include display(flex, center, none, none);
+
   margin: auto;
-  color: rgb(38, 95, 95);
-}
-.title h2 {
-  padding: 5px;
+  color: $blueLigth;
+
+  & h2 {
+    padding: 5px;
+  }
+
 }
 
 .btn {
@@ -58,16 +76,17 @@ a:hover {
   background-color: white;
   padding: 2px;
   transition: all ease-in-out 100ms;
-}
-.btn:hover {
-  background-color: rgb(211, 211, 211);
+
+  &:hover {
+    background-color: rgb(211, 211, 211);
+  }
 }
 
+
 #main {
-  display: grid;
-  align-items: center;
-  justify-content: none;
-  justify-items: center;
+
+  @include display(grid, center, none, center);
+
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 4px;
@@ -77,22 +96,25 @@ a:hover {
   margin: 50px auto;
 }
 
+
 .poster {
   width: 100%;
   transition: all ease-in-out 200ms;
-}
-.poster:hover {
-  scale: 105%;
-  margin-top: 5px;
-  cursor: pointer;
+
+  &:hover {
+    scale: 105%;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
 }
 
 .movie-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  justify-items: none;
+
+  @include display(flex, center, flex-start, none);
+  
   flex-direction: column;
+
   background-color: white;
   width: 100%;
   height: 100%;
@@ -100,16 +122,17 @@ a:hover {
   border-radius: 10px;
   animation: fadeIn;
   animation-duration: 2s;
+
 }
 
 .movie-desc {
-  display: flex;
-  align-items: center;
-  justify-content: none;
-  justify-items: none;
+
+  @include display(flex, center, none, none);
+
   flex-direction: column;
   align-self: flex-start;
   justify-self: center;
+
   width: 80vw;
   height: 60vh;
   position: fixed;
@@ -120,23 +143,24 @@ a:hover {
 }
 
 .poster-desc {
-  display: flex;
-  align-items: center;
-  justify-content: none;
-  justify-items: none;
+
+  @include display(flex, center, none, none);
   position: absolute;
   z-index: 1;
 }
 
+
+
 .poster-desc-img {
-  width: 18vw;
-  height: auto;
+
+  @include poster(18vw, auto);
   padding: 50px;
+
 }
 
 .poster-desc-txt {
-  width: 50%;
-  height: auto;
+
+  @include poster(50%, auto);
   color: white;
 }
 
@@ -150,12 +174,12 @@ a:hover {
   position: relative;
   left: 5vw;
   margin-top: 5vh;
-  color: rgb(38, 95, 95);
+  color: $blueLigth;
   transition: all ease-in-out 200ms;
-}
-.x-mark:hover {
-  cursor: pointer;
-  color: rgb(19, 64, 64);
+
+  &:hover {
+    cursor: pointer;
+    color: darken($color: $blueLigth, $amount: 5%)
+  }
 }
 
-/*# sourceMappingURL=index.css.map */
