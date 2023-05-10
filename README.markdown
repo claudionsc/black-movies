@@ -13,6 +13,7 @@ O site recebe os dados de uma api, conectada a um banco de dados Postegres - [Ve
 * Api restful 
 * Redux 
 * Styled-Components
+* Sass
 
 
 ### `npm i`
